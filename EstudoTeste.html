@@ -115,6 +115,19 @@
             background: #218838;
             color: #fff;
         }
+        /* --- NOVO: Botão Excluir --- */
+        .btn-excluir {
+            background: #dc3545; /* Vermelho */
+            color: #fff;
+            padding: 8px 12px;
+            font-size: 14px;
+            margin-top: 10px;
+        }
+        .btn-excluir:hover {
+            background: #c82333;
+            color: #fff;
+        }
+
         /* --- NOVO BOTÃO ADICIONAR --- */
         .btn-add {
             background-color: #17a2b8; /* Ciano */
@@ -142,123 +155,15 @@
     <button type="button" id="btn-add-question" class="btn-add">Adicionar Nova Pergunta</button>
 
     <form id="quizForm">
-
-        <div class="question-block">
-            <div class="area-visualizacao">
-                <h3>1. Quem sou eu de acordo com a Bíblia? Escreva a resposta junto com a referência do capítulo bíblico.</h3>
-                <div class="resposta-correta" id="a1">
-                    Gabarito: <span class="gabarito-texto">Eu sou a realidade das primícias de Ap 14, nascido da semente de Deus, colhido, selado e pertencente às 12 tribos de Ap 7 no tempo do cumprimento do Apocalipse</span>
-                </div>
-                <button type="button" class="btn-editar">Editar</button>
-            </div>
-            <div class="area-edicao">
-                <label>Editar Pergunta:</label>
-                <textarea class="editar-pergunta-txt"></textarea>
-                <label>Editar Gabarito:</label>
-                <textarea class="editar-gabarito-txt"></textarea>
-                <button type="button" class="btn-salvar">Salvar</button>
-            </div>
-            <textarea id="q1" name="q1" class="user-answer-textarea" placeholder="Sua Resposta..."></textarea>
-        </div>
-
-        <div class="question-block">
-            <div class="area-visualizacao">
-                <h3>2. Qual é a prova de que eu fui realmente criado de acordo com a Bíblia?</h3>
-                <div class="resposta-correta" id="a2">
-                    Gabarito: <span class="gabarito-texto">Se fui colhido, selado e pertenço às 12 tribos de Ap 7</span>
-                </div>
-                <button type="button" class="btn-editar">Editar</button>
-            </div>
-            <div class="area-edicao">
-                <label>Editar Pergunta:</label>
-                <textarea class="editar-pergunta-txt"></textarea>
-                <label>Editar Gabarito:</label>
-                <textarea class="editar-gabarito-txt"></textarea>
-                <button type="button" class="btn-salvar">Salvar</button>
-            </div>
-            <textarea id="q2" name="q2" class="user-answer-textarea" placeholder="Sua Resposta..."></textarea>
-        </div>
-
-        <div class="question-block">
-            <div class="area-visualizacao">
-                <h3>3. ① Qual é o destino dos crentes, e ② quando a vida eterna começa?</h3>
-                <div class="resposta-correta" id="a3">
-                    Gabarito: <span class="gabarito-texto">① O mundo do paraíso e a vida eterna em Ap 21. ② Quando Deus traz o reino dos céus e o alimento da vida eterna</span>
-                </div>
-                <button type="button" class="btn-editar">Editar</button>
-            </div>
-            
-            <div class="area-edicao">
-                <label>Editar Pergunta:</label>
-                <textarea class="editar-pergunta-txt"></textarea>
-                <label>Editar Gabarito:</label>
-                <textarea class="editar-gabarito-txt"></textarea>
-                <button type="button" class="btn-salvar">Salvar</button>
-            </div>
-
-            <textarea id="q3" name="q3" class="user-answer-textarea" placeholder="Sua Resposta..."></textarea>
-        </div>
-
-        <div class="question-block">
-            <div class="area-visualizacao">
-                <h3>4. Quando o Apocalipse se cumpre, ① quem o cumpre e ② como ele o cumpre?</h3>
-                <div class="resposta-correta" id="a4">
-                    Gabarito: <span class="gabarito-texto">① Jesus. ② Quebrando os selos do livro selado em Ap 5</span>
-                </div>
-                <button type="button" class="btn-editar">Editar</button>
-            </div>
-            <div class="area-edicao">
-                <label>Editar Pergunta:</label>
-                <textarea class="editar-pergunta-txt"></textarea>
-                <label>Editar Gabarito:</label>
-                <textarea class="editar-gabarito-txt"></textarea>
-                <button type="button" class="btn-salvar">Salvar</button>
-            </div>
-            <textarea id="q4" name="q4" class="user-answer-textarea" placeholder="Sua Resposta..."></textarea>
-        </div>
-
-        <div class="question-block">
-            <div class="area-visualizacao">
-                 <h3>5. ① Qual é a razão pela qual Jesus julgou o povo escolhido que traiu em Ap 6? ② Após quais eventos é criado o novo reino e o novo povo (novo céu e nova terra) no Apocalipse? ③ Como é descrito esse novo reino e novo povo?</h3>
-                 <div class="resposta-correta" id="a5">
-                     Gabarito: <span class="gabarito-texto">① Porque não se arrependeram mesmo após receberem as cartas em Ap 2-3. ② Após o julgamento do sol, lua e estrelas do céu anterior em Ap 6. ③ As 12 tribos seladas em Ap 7</span>
-                 </div>
-                 <button type="button" class="btn-editar">Editar</button>
-            </div>
-            <div class="area-edicao">
-                 <label>Editar Pergunta:</label>
-                 <textarea class="editar-pergunta-txt"></textarea>
-                 <label>Editar Gabarito:</label>
-                 <textarea class="editar-gabarito-txt"></textarea>
-                 <button type="button" class="btn-salvar">Salvar</button>
-            </div>
-            <textarea id="q5" name="q5" class="user-answer-textarea" placeholder="Sua Resposta..."></textarea>
-        </div>
-
-        <div class="question-block">
-            <div class="area-visualizacao">
-                <h3>10. ① Qual capítulo do Apocalipse revela o traidor e o destruidor, e ② o que nos permite conhecer suas realidades?</h3>
-                <div class="resposta-correta" id="a10">
-                    Gabarito: <span class="gabarito-texto">① Ap 13. ② As ações realizadas conforme a profecia.</span>
-                </div>
-                <button type="button" class="btn-editar">Editar</button>
-            </div>
-            <div class="area-edicao">
-                <label>Editar Pergunta:</label>
-                <textarea class="editar-pergunta-txt"></textarea>
-                <label>Editar Gabarito:</label>
-                <textarea class="editar-gabarito-txt"></textarea>
-                <button type="button" class="btn-salvar">Salvar</button>
-            </div>
-            <textarea id="q10" name="q10" class="user-answer-textarea" placeholder="Sua Resposta..."></textarea>
-        </div>
-
+        
         <button type="button" onclick="toggleAnswers()">Ver / Ocultar Respostas</button>
-
     </form>
 </div>
 
 <script>
+    // Chave para salvar no localStorage
+    const STORAGE_KEY = 'meuQuizPerguntas';
+
     // Função original para mostrar/ocultar gabarito (sem alterações)
     function toggleAnswers() {
         const answers = document.querySelectorAll('.resposta-correta');
@@ -279,64 +184,151 @@
         }
     }
 
-    // --- CÓDIGO ATUALIZADO ---
+    /**
+     * Lê todo o DOM e salva no localStorage.
+     */
+    function salvarPerguntasNoLocalStorage() {
+        const todasPerguntas = [];
+        const questionBlocks = document.querySelectorAll('#quizForm .question-block');
+        
+        questionBlocks.forEach(block => {
+            const h3Pergunta = block.querySelector('h3');
+            const spanGabarito = block.querySelector('.gabarito-texto');
+            
+            if (h3Pergunta && spanGabarito) {
+                todasPerguntas.push({
+                    pergunta: h3Pergunta.textContent,
+                    gabarito: spanGabarito.textContent
+                });
+            }
+        });
+        
+        localStorage.setItem(STORAGE_KEY, JSON.stringify(todasPerguntas));
+    }
+
+    /**
+     * MODIFICADO: Cria o HTML para um bloco de pergunta (agora com botão Excluir).
+     */
+    function criarBlocoPergunta(perguntaTxt, gabaritoTxt, numero) {
+        const newQuestionBlock = document.createElement('div');
+        newQuestionBlock.className = 'question-block';
+        newQuestionBlock.dataset.questionId = numero;
+
+        newQuestionBlock.innerHTML = `
+            <div class="area-visualizacao">
+                <h3>${perguntaTxt}</h3>
+                <div class="resposta-correta" id="a${numero}">
+                    Gabarito: <span class="gabarito-texto">${gabaritoTxt}</span>
+                </div>
+                <button type="button" class="btn-editar">Editar</button>
+                <button type="button" class="btn-excluir">Excluir</button>
+            </div>
+            <div class="area-edicao">
+                <label>Editar Pergunta:</label>
+                <textarea class="editar-pergunta-txt"></textarea>
+                <label>Editar Gabarito:</label>
+                <textarea class="editar-gabarito-txt"></textarea>
+                <button type="button" class="btn-salvar">Salvar</button>
+            </div>
+            <textarea id="q${numero}" name="q${numero}" class="user-answer-textarea" placeholder="Sua Resposta..."></textarea>
+        `;
+        return newQuestionBlock;
+    }
+
+    /**
+     * Carrega as perguntas do localStorage e as renderiza na página.
+     */
+    function carregarPerguntasSalvas() {
+        const quizForm = document.getElementById('quizForm');
+        const toggleButton = quizForm.querySelector('button[onclick="toggleAnswers()"]');
+        
+        const perguntasSalvasJSON = localStorage.getItem(STORAGE_KEY);
+        
+        if (perguntasSalvasJSON) {
+            const perguntasSalvas = JSON.parse(perguntasSalvasJSON);
+            
+            // Limpa o formulário
+            const blocosExistentes = quizForm.querySelectorAll('.question-block');
+            blocosExistentes.forEach(bloco => bloco.remove());
+            
+            // Renderiza as perguntas salvas
+            perguntasSalvas.forEach((pergunta, index) => {
+                const numero = index + 1;
+                const novoBloco = criarBlocoPergunta(pergunta.pergunta, pergunta.gabarito, numero);
+                quizForm.insertBefore(novoBloco, toggleButton);
+            });
+            
+        } else {
+            // Página começa vazia se não houver nada salvo
+        }
+    }
+
+    /**
+     * Garante que os números das perguntas (1., 2., 3.)
+     * estejam sempre corretos.
+     */
+    function renumerarPerguntas() {
+        const questionBlocks = document.querySelectorAll('#quizForm .question-block');
+        questionBlocks.forEach((block, index) => {
+            const numero = index + 1;
+            const h3Pergunta = block.querySelector('h3');
+            
+            if (h3Pergunta) {
+                let textoAtual = h3Pergunta.textContent;
+                // Remove o número antigo (ex: "3. ") e coloca o novo (ex: "2. ")
+                textoAtual = textoAtual.replace(/^[0-9]+\. /, ''); 
+                h3Pergunta.textContent = `${numero}. ${textoAtual}`;
+            }
+            
+            // Atualiza também os IDs e 'name' para consistência
+            block.dataset.questionId = numero;
+            const respostaCorreta = block.querySelector('.resposta-correta');
+            if (respostaCorreta) respostaCorreta.id = `a${numero}`;
+            
+            const textareaResposta = block.querySelector('.user-answer-textarea');
+            if (textareaResposta) {
+                textareaResposta.id = `q${numero}`;
+                textareaResposta.name = `q${numero}`;
+            }
+        });
+    }
+
+    // --- LÓGICA PRINCIPAL (QUANDO A PÁGINA CARREGA) ---
     document.addEventListener('DOMContentLoaded', function() {
         
         const quizForm = document.getElementById('quizForm');
         const btnAddQuestion = document.getElementById('btn-add-question');
-        // Encontra o botão "Ver/Ocultar" para inserir novas perguntas ANTES dele
-        const toggleButton = document.querySelector('button[onclick="toggleAnswers()"]');
+        const toggleButton = quizForm.querySelector('button[onclick="toggleAnswers()"]');
 
-        // --- 1. LÓGICA PARA ADICIONAR NOVA PERGUNTA ---
+        // 1. Carrega as perguntas salvas (se existirem)
+        carregarPerguntasSalvas();
+
+        // 2. Lógica para ADICIONAR NOVA PERGUNTA
         btnAddQuestion.addEventListener('click', function() {
-            // Conta quantas perguntas já existem para saber o novo número
-            const currentQuestionCount = document.querySelectorAll('.question-block').length;
+            const currentQuestionCount = document.querySelectorAll('#quizForm .question-block').length;
             const newQuestionNumber = currentQuestionCount + 1;
+            
+            const perguntaTxt = `${newQuestionNumber}. Nova Pergunta...`;
+            const gabaritoTxt = 'Novo Gabarito...';
 
-            // Cria o novo bloco de pergunta como um elemento div
-            const newQuestionBlock = document.createElement('div');
-            newQuestionBlock.className = 'question-block';
-
-            // Define o HTML interno do novo bloco
-            // Usamos o número da nova pergunta nos IDs (q11, a11, etc.)
-            newQuestionBlock.innerHTML = `
-                <div class="area-visualizacao">
-                    <h3>${newQuestionNumber}. Nova Pergunta...</h3>
-                    <div class="resposta-correta" id="a${newQuestionNumber}">
-                        Gabarito: <span class="gabarito-texto">Novo Gabarito...</span>
-                    </div>
-                    <button type="button" class="btn-editar">Editar</button>
-                </div>
-                <div class="area-edicao">
-                    <label>Editar Pergunta:</label>
-                    <textarea class="editar-pergunta-txt">${newQuestionNumber}. Nova Pergunta...</textarea>
-                    <label>Editar Gabarito:</label>
-                    <textarea class="editar-gabarito-txt">Novo Gabarito...</textarea>
-                    <button type="button" class="btn-salvar">Salvar</button>
-                </div>
-                <textarea id="q${newQuestionNumber}" name="q${newQuestionNumber}" class="user-answer-textarea" placeholder="Sua Resposta..."></textarea>
-            `;
-
-            // Insere o novo bloco de pergunta no formulário, antes do botão "Ver/Ocultar"
-            quizForm.insertBefore(newQuestionBlock, toggleButton);
+            const novoBloco = criarBlocoPergunta(perguntaTxt, gabaritoTxt, newQuestionNumber);
+            quizForm.insertBefore(novoBloco, toggleButton);
+            
+            // Salva o novo estado no localStorage
+            salvarPerguntasNoLocalStorage();
         });
 
 
-        // --- 2. LÓGICA DE EVENTOS (EDITAR/SALVAR) USANDO DELEGAÇÃO ---
-        // Em vez de adicionar um listener para CADA botão, adicionamos UM no documento
-        // que "ouve" cliques em botões que são adicionados dinamicamente.
-
+        // 3. Lógica de EVENTOS (EDITAR/SALVAR/EXCLUIR) usando Delegação
         document.addEventListener('click', function(event) {
             
             const target = event.target; // O elemento exato que foi clicado
 
             // --- Lógica se o clique foi no Botão de EDITAR ---
             if (target.classList.contains('btn-editar')) {
-                // 1. Encontra o 'container' pai da pergunta que foi clicada
                 const container = target.closest('.question-block');
-                if (!container) return; // Se não achar o container, para
+                if (!container) return; 
 
-                // 2. Encontra os elementos dentro desse container
                 const displayArea = container.querySelector('.area-visualizacao');
                 const editArea = container.querySelector('.area-edicao');
                 const h3Pergunta = container.querySelector('h3');
@@ -344,22 +336,18 @@
                 const textareaPergunta = container.querySelector('.editar-pergunta-txt');
                 const textareaGabarito = container.querySelector('.editar-gabarito-txt');
 
-                // 3. Pega os textos atuais e joga nos textareas
                 textareaPergunta.value = h3Pergunta.textContent;
                 textareaGabarito.value = spanGabarito.textContent;
 
-                // 4. Esconde a visualização e mostra a edição
                 displayArea.style.display = 'none';
                 editArea.style.display = 'block';
             }
 
             // --- Lógica se o clique foi no Botão de SALVAR ---
             if (target.classList.contains('btn-salvar')) {
-                // 1. Encontra o 'container' pai
                 const container = target.closest('.question-block');
-                if (!container) return; // Se não achar o container, para
+                if (!container) return;
 
-                // 2. Encontra os elementos
                 const displayArea = container.querySelector('.area-visualizacao');
                 const editArea = container.querySelector('.area-edicao');
                 const h3Pergunta = container.querySelector('h3');
@@ -367,19 +355,36 @@
                 const textareaPergunta = container.querySelector('.editar-pergunta-txt');
                 const textareaGabarito = container.querySelector('.editar-gabarito-txt');
 
-                // 3. Pega os novos textos dos textareas e atualiza o h3 e o gabarito
                 h3Pergunta.textContent = textareaPergunta.value;
                 spanGabarito.textContent = textareaGabarito.value;
 
-                // 4. Esconde a edição e mostra a visualização
                 editArea.style.display = 'none';
                 displayArea.style.display = 'block';
+                
+                // Renumera e salva no localStorage
+                renumerarPerguntas();
+                salvarPerguntasNoLocalStorage();
+            }
+
+            // --- NOVO: Lógica se o clique foi no Botão de EXCLUIR ---
+            if (target.classList.contains('btn-excluir')) {
+                // Pede confirmação
+                if (confirm('Tem certeza que deseja excluir esta pergunta?')) {
+                    const container = target.closest('.question-block');
+                    if (!container) return;
+
+                    // 1. Remove o bloco da página
+                    container.remove();
+                    
+                    // 2. Renumera as perguntas restantes
+                    renumerarPerguntas();
+                    
+                    // 3. Salva a nova lista (sem a pergunta excluída) no localStorage
+                    salvarPerguntasNoLocalStorage();
+                }
             }
         });
         
-        // O código antigo que fazia forEach() foi removido pois
-        // foi substituído pelo listener de delegação acima.
-
     });
 </script>
 
