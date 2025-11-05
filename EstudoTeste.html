@@ -143,7 +143,22 @@
         body {
             background-image: url(images/photo_2025-10-26_11-42-02.jpg);
             background-size:cover;
-            background-repeat: no-repeat;
+        }
+        #btn-add-bottom {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            z-index: 1000;
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            padding: 0;
+            font-size: 30px;
+            line-height: 60px;
+            text-align: center;
+        }
+        .hide-show{
+            width: 40%;
         }
     </style>
 </head>
@@ -153,11 +168,13 @@
     <h1>Teste de selagem</h1>
     <p>Digite suas respostas e clique em "Ver Respostas" para comparar com o gabarito.</p>
 
-    <button type="button" id="btn-add-question" class="btn-add">Adicionar Nova Pergunta</button>
+    <button type="button" class="btn-add">Adicionar Nova Pergunta</button>
 
     <form id="quizForm">
         
-        <button type="button" onclick="toggleAnswers()">Ver / Ocultar Respostas</button>
+        <button type="button" class="hide-show" onclick="toggleAnswers()">Ver / Ocultar Respostas</button>
+        <button type="button" class="btn-add" id="btn-add-bottom">+</button>
+
     </form>
 </div>
 
@@ -298,26 +315,31 @@
     document.addEventListener('DOMContentLoaded', function() {
         
         const quizForm = document.getElementById('quizForm');
-        const btnAddQuestion = document.getElementById('btn-add-question');
+        //Seleciona TODOS botões de adicionar pela CLASSE
+        const btnAddQuestion = document.querySelectorAll('.btn-add');
         const toggleButton = quizForm.querySelector('button[onclick="toggleAnswers()"]');
 
         // 1. Carrega as perguntas salvas (se existirem)
         carregarPerguntasSalvas();
 
         // 2. Lógica para ADICIONAR NOVA PERGUNTA
-        btnAddQuestion.addEventListener('click', function() {
-            const currentQuestionCount = document.querySelectorAll('#quizForm .question-block').length;
-            const newQuestionNumber = currentQuestionCount + 1;
-            
-            const perguntaTxt = `${newQuestionNumber}. Nova Pergunta...`;
-            const gabaritoTxt = 'Novo Gabarito...';
+        //Vai iterar sobre os BUttons
+        btnAddQuestion.forEach(button =>{
+            button.addEventListener('click', function() {
+                const currentQuestionCount = document.querySelectorAll('#quizForm .question-block').length;
+                const newQuestionNumber = currentQuestionCount + 1;
+                
+                const perguntaTxt = `${newQuestionNumber}. Nova Pergunta...`;
+                const gabaritoTxt = 'Novo Gabarito...';
 
-            const novoBloco = criarBlocoPergunta(perguntaTxt, gabaritoTxt, newQuestionNumber);
-            quizForm.insertBefore(novoBloco, toggleButton);
-            
-            // Salva o novo estado no localStorage
-            salvarPerguntasNoLocalStorage();
-        });
+                const novoBloco = criarBlocoPergunta(perguntaTxt, gabaritoTxt, newQuestionNumber);
+                quizForm.insertBefore(novoBloco, toggleButton);
+                
+                // Salva o novo estado no localStorage
+                salvarPerguntasNoLocalStorage();
+            });
+        })
+
 
 
         // 3. Lógica de EVENTOS (EDITAR/SALVAR/EXCLUIR) usando Delegação
